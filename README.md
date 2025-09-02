@@ -6,9 +6,10 @@ A **simple, efficient, and fast bot** built in **Rust** that monitors decentrali
 
 ## Demo
 
-*A short **20–30 second** screen recording is perfect. You can use **OBS Studio** or Windows **Game Bar (Win + G)** to record your terminal.*
+*Follow this tutorial to set up bot!*
 
-![Demo GIF placeholder](https://via.placeholder.com/800x400.png?text=Record+a+GIF+of+the+bot+running+and+place+it+here)
+Uploading 0902(1).mp4…
+
 
 ---
 
