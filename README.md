@@ -1,44 +1,128 @@
-# Polygon Arbitrage Opportunity Detector Bot
+🚀 Polygon Arbitrage Opportunity Detector Bot
 
-A simple and efficient bot built in Rust that detects potential arbitrage opportunities on the Polygon network by monitoring prices across multiple decentralized exchanges (DEXes).
+A simple, efficient, and fast bot built in Rust that monitors decentralized exchanges (DEXes) on the Polygon network to detect potential arbitrage opportunities.
 
----
+It continuously checks token prices across multiple DEXes (like QuickSwap and SushiSwap) and simulates whether profitable arbitrage trades are possible.
 
-###  Demo
+🎥 Demo
 
-*(Here, you can record your screen for 20-30 seconds showing the bot running in the terminal and then upload it as a GIF. This is highly recommended and very impressive.)*
+👉 A short 20–30 second screen recording is the best way to demonstrate your bot in action.
+You can use free tools like OBS Studio or the built-in Windows Game Bar (Win + G) to capture your terminal.
 
-![Demo GIF placeholder](https://via.placeholder.com/800x400.png?text=Record+a+GIF+of+the+bot+running+and+place+it+here)
+✨ Key Features
 
----
+🔄 Multi-DEX Monitoring – Fetches live token prices from QuickSwap and SushiSwap on Polygon.
 
-### Key Features
+📈 Arbitrage Detection – Compares prices and identifies arbitrage opportunities.
 
-- **Multi-DEX Monitoring:** Continuously fetches and compares token prices from QuickSwap and SushiSwap on the Polygon Mainnet.
-- **Arbitrage Detection:** Identifies potential arbitrage opportunities by calculating the price difference for a given trade size.
-- **Simulated Profit Calculation:** Calculates the estimated *net profit* after accounting for a simplified, configurable gas cost.
-- **Database Logging:** Logs all profitable opportunities to a local SQLite database (`arbitrage_opportunities.db`) for persistent record-keeping.
-- **Configurable:** All key parameters (RPC URL, token/DEX addresses, trade size, profit thresholds) are managed in a simple `config.toml` file.
-- **Asynchronous & Performant:** Built with Rust and Tokio for efficient, non-blocking network requests.
+💰 Profit Simulation – Calculates estimated net profit after accounting for gas fees.
 
-### Technology Stack
+🗂️ Database Logging – Saves all profitable opportunities in a local SQLite database (arbitrage_opportunities.db).
 
-- **Language:** Rust
-- **Blockchain Interaction:** `ethers-rs`
-- **Asynchronous Runtime:** `Tokio`
-- **Configuration:** `config-rs`
-- **Database:** `rusqlite` (SQLite)
-- **Network:** Polygon Mainnet
+⚙️ Fully Configurable – Adjust all parameters easily via a config.toml file.
 
----
+⚡ Blazing Fast & Async – Built with Rust + Tokio for non-blocking, efficient performance.
 
-### Setup and Usage
+🛠️ Tech Stack
 
-**1. Prerequisites:**
-   - [Rust](https://www.rust-lang.org/tools/install) toolchain installed.
-   - For Windows, [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) are required.
+Language: Rust
 
-**2. Clone the Repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd arbitrage_bot
+Blockchain Interaction: ethers-rs
+
+Async Runtime: Tokio
+
+Config Handling: config-rs
+
+Database: rusqlite (SQLite)
+
+Network: Polygon Mainnet
+
+🚀 Getting Started
+
+Follow these steps to run the bot locally:
+
+1. Prerequisites
+
+Install the Rust toolchain
+.
+
+Windows users: Install Microsoft C++ Build Tools
+.
+
+2. Clone the Repository
+git clone https://github.com/jasneet2003/Polygon-Arbitrage-Opportunity-Detector-Bot.git
+cd Polygon-Arbitrage-Opportunity-Detector-Bot
+
+3. Configure the Bot
+
+Inside the project directory, copy the example config file:
+
+# Windows PowerShell
+copy config.example.toml config.toml
+
+# Linux/macOS
+cp config.example.toml config.toml
+
+
+Now edit config.toml and add your Polygon RPC URL.
+
+👉 Jump to Configuration Details
+ for help setting this up.
+
+4. Run the Bot
+cargo run
+
+
+The bot will:
+
+Initialize
+
+Create arbitrage_opportunities.db
+
+Start monitoring opportunities 🚀
+
+5. Stop the Bot
+
+Press Ctrl + C in the terminal to safely stop it.
+
+⚙️ Configuration Details
+
+All settings are managed in config.toml.
+
+🔗 Polygon RPC URL (Required)
+
+You’ll need a personal RPC URL (public ones are unreliable & rate-limited).
+
+How to get one (free, 2 minutes):
+
+Sign up at Alchemy
+ or Infura
+.
+
+Create a new app/project.
+
+Select Polygon PoS (Mainnet) as the network.
+
+Copy your HTTPS URL (e.g. https://polygon-mainnet.g.alchemy.com/v2/your-api-key).
+
+Paste it into the rpc_url field in config.toml.
+
+⚙️ Other Configurable Parameters
+
+amount_in – Amount of base token (WMATIC) to simulate arbitrage with.
+
+min_profit_threshold – Minimum net profit (USD) required before logging an opportunity.
+
+simulated_gas_cost_usd – Estimated gas fees (USD) for the two required swaps.
+
+📜 License
+
+This project is licensed under the MIT License – feel free to use, modify, and share.
+
+🌟 Final Notes
+
+This bot is a learning + experimental project.
+
+It does not execute trades automatically (just detects & logs).
+
+Always be careful when adapting it to real trading — arbitrage is competitive and risky.
