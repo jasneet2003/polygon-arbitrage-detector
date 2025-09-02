@@ -8,7 +8,8 @@ A **simple, efficient, and fast bot** built in **Rust** that monitors decentrali
 
 *Follow this tutorial to set up bot!*
 
-Uploading 0902(1).mp4…
+https://github.com/user-attachments/assets/493b878c-fbe2-4e11-af48-ad4783c95d4e
+
 
 
 ---
