@@ -1,0 +1,25 @@
+# Configuration for the Polygon Arbitrage Bot
+
+[network]
+rpc_url = "PASTE_YOUR_POLYGON_RPC_URL_HERE"
+
+[settings]
+# The amount of the base token (WMATIC) to use for simulation
+amount_in = 100.0
+# The minimum NET profit in USDC to log an opportunity
+min_profit_threshold = 0.50 # 50 cents
+
+[simulation]
+# Estimated gas cost for two swaps on Polygon, in USD
+# (This is a simplified, fixed estimate for simulation purposes)
+simulated_gas_cost_usd = 0.10 # 10 cents
+
+# A list of tokens we can use by name
+[tokens]
+WMATIC = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"
+USDC = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+
+# A list of DEXes we can use by name
+[dexes]
+QuickSwap = "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
+SushiSwap = "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
