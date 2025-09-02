@@ -48,7 +48,7 @@ Follow these steps to run the bot locally.
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/jasneet2003/Polygon-Arbitrage-Opportunity-Detector-Bot.git
+git clone https://github.com/jasneet2003/polygon-arbitrage-detector.git
 cd Polygon-Arbitrage-Opportunity-Detector-Bot
 ```
 
